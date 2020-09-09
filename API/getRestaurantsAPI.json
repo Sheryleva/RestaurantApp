@@ -1,0 +1,153 @@
+{
+  "httpcode": 200,
+  "httpmessage": "sucess",
+  "response": [
+    {
+      "category": "Cost effective",
+      "restaurantList": [
+        {
+          "name": "Chick-fil-A",
+          "imageUrl": [
+            {
+              "display": "https://i.postimg.cc/YqMymFdF/Chickfil-A.jpg"
+            },
+            {
+              "img1": "https://i.postimg.cc/t4pGd5jt/chick1.jpg"
+            },
+            {
+              "img2": "https://i.postimg.cc/kgBFHrqn/chick2.jpg"
+            },
+            {
+              "img3": "https://i.postimg.cc/5NHXdfYk/chick3.jpg"
+            },
+            {
+              "img4": "https://i.postimg.cc/P5YNJKMW/chick4.png"
+            }
+          ],
+          "rating": "4.6",
+          "review": "1837"
+        },
+        {
+          "name": "Applebee's",
+          "imageUrl": [
+            {
+              "display": "https://i.postimg.cc/nrzpHW9F/Applebees.jpg"
+            },
+            {
+              "img1": "https://i.postimg.cc/2j1k32k1/apple1.jpg"
+            },
+            {
+              "img2": "https://i.postimg.cc/0y0xh4fB/apple2.jpg"
+            },
+            {
+              "img3": "https://i.postimg.cc/nLVZx1Sc/apple3.jpg"
+            },
+            {
+              "img4": "https://i.postimg.cc/MZfwzH5R/apple4.jpg"
+            }
+          ],
+          "rating": "4.0",
+          "review": "1486"
+        }
+      ]
+    },
+    {
+      "category": "Bit Pricer",
+      "restaurantList": [
+        {
+          "name": "Olive Garden",
+          "imageUrl": [
+            {
+              "display": "https://i.postimg.cc/Xqwm6cQj/olive.jpg"
+            },
+            {
+              "img1": "https://i.postimg.cc/hG0jbj6h/olive1.jpg"
+            },
+            {
+              "img2": "https://i.postimg.cc/QCFd3qtW/olive2.jpg"
+            },
+            {
+              "img3": "https://i.postimg.cc/pV3Fd9Ht/olive3.png"
+            },
+            {
+              "img4": "https://i.postimg.cc/KvLg3ZG3/olive4.jpg"
+            }
+          ],
+          "rating": "4.5",
+          "review": "873"
+        },
+        {
+          "name": "The Cheesecake Factory",
+          "imageUrl": [
+            {
+              "display": "https://i.postimg.cc/Gmrrt9yg/cheesecakef.jpg"
+            },
+            {
+              "img1": "https://i.postimg.cc/hj6fhYN0/cheesecake1.jpg"
+            },
+            {
+              "img2": "https://i.postimg.cc/CMnR9Ffr/cheesecake2.jpg"
+            },
+            {
+              "img3": "https://i.postimg.cc/QCZh2ZRv/cheesecake3.jpg"
+            },
+            {
+              "img4": "https://i.postimg.cc/SNqmVqLM/cheesecake4.jpg"
+            }
+          ],
+          "rating": "4.7",
+          "review": "938"
+        }
+      ]
+    },
+    {
+      "category": "Big Spender!",
+      "restaurantList": [
+        {
+          "name": "The French Laundry",
+          "imageUrl": [
+            {
+              "display": "https://i.postimg.cc/2jZfxndX/French-Laundry.jpg"
+            },
+            {
+              "img1": "https://i.postimg.cc/KzByrsRf/french1.jpg"
+            },
+            {
+              "img2": "https://i.postimg.cc/7Yxy09D1/french2.jpg"
+            },
+            {
+              "img3": "https://i.postimg.cc/2StRpfWT/french3.jpg"
+            },
+            {
+              "img4": "https://i.postimg.cc/rm6BmCQr/french4.jpg"
+            }
+          ],
+          "rating": "4.7",
+          "review": "256"
+        },
+        {
+          "name": "Chef’s Table at Brooklyn Fare",
+          "imageUrl": [
+            {
+              "display": "https://i.postimg.cc/m2yJdjPV/Chefs-Table.jpg"
+            },
+            {
+              "img1": "https://i.postimg.cc/4N4rm3bB/chef1.jpg"
+            },
+            {
+              "img2": "https://i.postimg.cc/L8w7C3db/chef2.jpg"
+            },
+            {
+              "img3": "https://i.postimg.cc/GhSStxpm/chef3.jpg"
+            },
+            {
+              "img4": "https://i.postimg.cc/zBjxrnM5/chef4.jpg"
+            }
+          ],
+          "rating": "4.6",
+          "review": "183"
+        }
+      ]
+    }
+  ]
+}
