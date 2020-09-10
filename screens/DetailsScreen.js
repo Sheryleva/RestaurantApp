@@ -9,12 +9,15 @@ import { render } from 'react-dom';
 //Create a function which return JSX
 const DetailsScreen =  (props) => {
     // this.props.route.params.params.report.name
-    console.log(props)
+    console.log(props);
+    console.log("yes")
+    console.log(props.route.params.image[1].img1);
     return (
     <View style={styles.container}>
-        
-        <Button style={{fontSize: 25,fontWeight: "bold"}} title = {props.navigation.getParam("title")} />
-        <Button title = {props.navigation.getParam("releaseyear")} style={{width: '100%', height:'100%',flex: 1, resizeMode: "stretch"}}/>
+        <Image source = {{uri: props.route.params.image[1].img1}} style={{ flex: 1, width: 300, height: 100, margin: 30}}/>
+        <Image source = {{uri: props.route.params.image[2].img2}} style={{ flex: 1, width: 300, height: 100, margin: 30 }}/>
+        <Image source = {{uri: props.route.params.image[3].img3}} style={{ flex: 1, width: 300, height: 100, margin: 30}}/>
+        <Image source = {{uri: props.route.params.image[4].img4}} style={{ flex: 1, width: 300, height: 100, margin: 30 }}/>
     </View>
     );
 
