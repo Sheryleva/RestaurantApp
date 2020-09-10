@@ -4,6 +4,7 @@ import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Search from './screens/Search';
 
 const MyTheme = {
   colors: {
@@ -20,6 +21,7 @@ export default function App() {
     <NavigationContainer theme={MyTheme}>
       <Stack.Navigator initialRouteName="HomeScreen">
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Search" component={Search} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>

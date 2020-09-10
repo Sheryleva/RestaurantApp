@@ -4,8 +4,10 @@ import {View,Text,StyleSheet,SafeAreaView,TextInput,Platform,StatusBar,
 import Category from '../Custom\ Component/Category';
 import getRestaurantsAPI from '../API/getRestaurantsAPI.json';
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { Searchbar } from 'react-native-paper';
+import { Searchbar, Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { SearchBar } from 'react-native-elements';
+import Search from '../screens/Search'
 
 
 const { height, width } = Dimensions.get('window')
@@ -13,29 +15,53 @@ const { height, width } = Dimensions.get('window')
 
 class HomeScreen extends Component{
     constructor(props) {
-        super(props);
-    };
-    state = {
-        search: '',
+        super(props)
+        this.state = {search: ''};
+        this.arrayholder = [];
       };
+      componentDidMount() {
+          console.log(this.arrayholder)
+      }
+
+      SearchFilterFunction(text) {
+        //passing the inserted text in textinput
+        const newData = this.arrayholder.filter(function(item) {
+          //applying filter for the inserted text in search bar
+          const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
+          const textData = text.toUpperCase();
+          return itemData.indexOf(textData) > -1;
+        });
     
-      updateSearch = (search) => {
-        this.setState({ search });
-      };
+        this.setState({
+          //setting the filtered newData on datasource
+          //After setting the data it will automatically re-render the view
+          dataSource: newData,
+          text: text,
+        });
+      }
+
+      
     
     render() {
-        const { search } = this.state;
         
         return (
             
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1 }}>
-                    <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd',paddingHorizontal: 10, paddingTop:20 }}>
-                    <Searchbar
+                    <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: 'white',paddingHorizontal: 20, paddingTop:10 }}>
+                    <TouchableOpacity onPress = { () => 
+                            this.props.navigation.navigate(Search)
+                    }
+                    >
+                    <SearchBar
+                        round = {true}
+                        searchIcon={{ size: 24 }}
                         placeholder="Type Here..."
-                        onChangeText={this.updateSearch}
-                        value={search}
+                        platform = {Platform.OS}
+                        value = {this.state}
                     />
+   
+                    </TouchableOpacity>
                     </View>
                       
                     <ScrollView
@@ -67,12 +93,12 @@ class HomeScreen extends Component{
                                     />
                                     </TouchableOpacity >
                                     <TouchableOpacity onPress= {() => this.props.navigation.navigate("Details",{
-                                        image: getRestaurantsAPI.response[0].restaurantList[0].imageUrl,
+                                        image: getRestaurantsAPI.response[0].restaurantList[2].imageUrl,
                                     })}>
-                                    <Category imageUri={{uri: getRestaurantsAPI.response[0].restaurantList[0].imageUrl[0].display}}
-                                        name= {getRestaurantsAPI.response[0].restaurantList[0].name}
-                                        rating = {getRestaurantsAPI.response[0].restaurantList[0].rating}
-                                        reviews = {getRestaurantsAPI.response[0].restaurantList[0].review}
+                                    <Category imageUri={{uri: getRestaurantsAPI.response[0].restaurantList[2].imageUrl[0].display}}
+                                        name= {getRestaurantsAPI.response[0].restaurantList[2].name}
+                                        rating = {getRestaurantsAPI.response[0].restaurantList[2].rating}
+                                        reviews = {getRestaurantsAPI.response[0].restaurantList[2].review}
                                     />
                                     </TouchableOpacity>
                                 </ScrollView>
@@ -103,12 +129,12 @@ class HomeScreen extends Component{
                                     />
                                     </TouchableOpacity>
                                     <TouchableOpacity onPress= {() => this.props.navigation.navigate("Details",{
-                                        image: getRestaurantsAPI.response[1].restaurantList[0].imageUrl,
+                                        image: getRestaurantsAPI.response[1].restaurantList[2].imageUrl,
                                     })}>
-                                    <Category imageUri={{uri: getRestaurantsAPI.response[1].restaurantList[0].imageUrl[0].display}}
-                                        name= {getRestaurantsAPI.response[1].restaurantList[0].name}
-                                        rating = {getRestaurantsAPI.response[1].restaurantList[0].rating}
-                                        reviews = {getRestaurantsAPI.response[1].restaurantList[0].review}
+                                    <Category imageUri={{uri: getRestaurantsAPI.response[1].restaurantList[2].imageUrl[0].display}}
+                                        name= {getRestaurantsAPI.response[1].restaurantList[2].name}
+                                        rating = {getRestaurantsAPI.response[1].restaurantList[2].rating}
+                                        reviews = {getRestaurantsAPI.response[1].restaurantList[2].review}
                                     />
                                     </TouchableOpacity>
                                 </ScrollView>
@@ -138,12 +164,12 @@ class HomeScreen extends Component{
                                     />
                                     </TouchableOpacity>
                                     <TouchableOpacity onPress= {() => this.props.navigation.navigate("Details",{
-                                        image: getRestaurantsAPI.response[2].restaurantList[0].imageUrl,
+                                        image: getRestaurantsAPI.response[2].restaurantList[2].imageUrl,
                                     })}>
-                                    <Category imageUri={{uri: getRestaurantsAPI.response[2].restaurantList[0].imageUrl[0].display}}
-                                        name= {getRestaurantsAPI.response[2].restaurantList[0].name}
-                                        rating = {getRestaurantsAPI.response[2].restaurantList[0].rating}
-                                        reviews = {getRestaurantsAPI.response[2].restaurantList[0].review}
+                                    <Category imageUri={{uri: getRestaurantsAPI.response[2].restaurantList[2].imageUrl[0].display}}
+                                        name= {getRestaurantsAPI.response[2].restaurantList[2].name}
+                                        rating = {getRestaurantsAPI.response[2].restaurantList[2].rating}
+                                        reviews = {getRestaurantsAPI.response[2].restaurantList[2].review}
                                     />
                                     </TouchableOpacity>
                                 </ScrollView>
