@@ -14,10 +14,10 @@ const DetailsScreen =  (props) => {
     console.log(props.route.params.image[1].img1);
     return (
     <View style={styles.container}>
-        <Image source = {{uri: props.route.params.image[1].img1}} style={{ flex: 1, width: 300, height: 100, margin: 30}}/>
-        <Image source = {{uri: props.route.params.image[2].img2}} style={{ flex: 1, width: 300, height: 100, margin: 30 }}/>
-        <Image source = {{uri: props.route.params.image[3].img3}} style={{ flex: 1, width: 300, height: 100, margin: 30}}/>
-        <Image source = {{uri: props.route.params.image[4].img4}} style={{ flex: 1, width: 300, height: 100, margin: 30 }}/>
+        <Image source = {{uri: props.route.params.image[1].img1}} style={{ flex: 1, width: 300, height: 100, margin: 30,resizeMode: "stretch"}}/>
+        <Image source = {{uri: props.route.params.image[2].img2}} style={{ flex: 1, width: 300, height: 100, margin: 30 ,resizeMode: "stretch"}}/>
+        <Image source = {{uri: props.route.params.image[3].img3}} style={{ flex: 1, width: 300, height: 100, margin: 30,resizeMode: "stretch"}}/>
+        <Image source = {{uri: props.route.params.image[4].img4}} style={{ flex: 1, width: 300, height: 100, margin: 30 ,resizeMode: "stretch"}}/>
     </View>
     );
 
